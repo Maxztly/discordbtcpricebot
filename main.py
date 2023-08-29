@@ -22,7 +22,6 @@ async def get_btc_price():
     data = response.json()
     price = data['bpi']['USD']['rate']
 
-    # Remove the comma from the price string and then convert it to a float
     price_without_comma = price.replace(',', '')
     rounded_price = math.ceil(float(price_without_comma))
 
